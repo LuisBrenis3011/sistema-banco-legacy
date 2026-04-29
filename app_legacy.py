@@ -100,7 +100,7 @@ class BancoLegacyApp(ctk.CTk):
             return
 
         resultado = DAOLegacy.consultar_estado_sesion(self.id_cliente_actual)
-        print(f"Polling: {resultado}")  # Temporal para debug
+        print(f"Polling: {resultado}")  
 
         if resultado and resultado['SESION_ACTIVA']:
             self.polling_activo = False
